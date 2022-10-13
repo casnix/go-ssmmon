@@ -26,7 +26,7 @@ All three modes can be run in open or protected mode.  In open mode all packets 
 ### Source announcer neighborship and adjacency
 #### In active promiscuous mode
 
-The source announcer (referred to as "announcer" now-on) will listen and announce on a user defined multicast group using IGMPv2.  When a neighbor SSMMON node is configured with another unique group, the announcer will join that group and listen for that source.
+The source announcer (referred to as "announcer" now-on) will listen and announce on a user defined multicast group using IGMPv3 group join.  When a neighbor SSMMON node is configured with another unique group, the announcer will join that group and listen for that source.
 If it receives hello packets on the remote node's announcement group, the announcer will consider the remote node a neighbor.  
 If the hello packet from the remote node describes timers that match the announcer, then the announcer will send its own hello packet on the remote node's multicast group.  
 If the remote node is in active promiscuous mode and agrees with the values in the local announcer's hello packet, it will reciprocate by repeating this process on the local announcer's group.
